@@ -1,4 +1,4 @@
-export class EventEmitter<T extends string> {
+export class EventEmitter<T extends string|symbol> {
   private events: Partial<Record<T, ((data?: any) => void)[]>> = {};
 
   emit(event: T, data?: any) {

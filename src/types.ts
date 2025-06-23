@@ -16,6 +16,7 @@ export type Chat = {
   id: number;
   title: string;
   code: string;
+  isError: boolean;
   messages: (AssistantMessage | Message)[];
 };
 export type ChatState = {

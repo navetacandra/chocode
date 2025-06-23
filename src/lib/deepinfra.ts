@@ -61,6 +61,12 @@ export async function completion(
       },
     );
 
+    if(!response.ok) {
+      const error = await response.json();
+      streamControl.emit("error", error.detail);
+      return error;
+    }
+
     const reader = response.body?.getReader();
     while (true) {
       const { done, value } = await reader?.read();
