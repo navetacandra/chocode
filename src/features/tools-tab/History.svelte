@@ -55,7 +55,7 @@
         tabindex={2}
         role="button"
         class="bg-gray-700 p-4 rounded-lg flex justify-between items-center press-effect cursor-pointer group hover:bg-gray-600 transition-all"
-        on:click={(e) => e.target.tagName !== 'I' && selectChat(history.id)}
+        on:click={(e) => e.target.tagName !== "I" && selectChat(history.id)}
       >
         <span class="line-clamp-1 max-w-56">{history.title}</span>
         <i

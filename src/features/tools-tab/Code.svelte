@@ -46,7 +46,7 @@
 
     currentCode.subscribe((code) => {
       if ($currentCode === state.doc.toString()) return;
-      
+
       view.dispatch({
         changes: {
           from: 0,

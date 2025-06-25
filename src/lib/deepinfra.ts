@@ -61,7 +61,7 @@ export async function completion(
       },
     );
 
-    if(!response.ok) {
+    if (!response.ok) {
       const error = await response.json();
       streamControl.emit("error", error.detail);
       return error;

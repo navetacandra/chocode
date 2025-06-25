@@ -23,13 +23,14 @@
 
     localStorage.setItem("chat-history", JSON.stringify(histories));
   });
-  $: window.addEventListener('keydown', e => {
+  $: window.addEventListener("keydown", (e) => {
     const meta = e.ctrlKey && e.altKey;
-    if(meta && e.key === '1') currentTab.set('history');
-    if(meta && e.key === '2') currentTab.set('chat');
-    if(meta && e.key === '3') currentTab.set('code');
-    if(meta && e.key === '4') currentTab.set('preview');
-    if(meta && (e.key === 't' || e.key === 'T')) document.querySelector('textarea').focus();
+    if (meta && e.key === "1") currentTab.set("history");
+    if (meta && e.key === "2") currentTab.set("chat");
+    if (meta && e.key === "3") currentTab.set("code");
+    if (meta && e.key === "4") currentTab.set("preview");
+    if (meta && (e.key === "t" || e.key === "T"))
+      document.querySelector("textarea").focus();
   });
 </script>
 
